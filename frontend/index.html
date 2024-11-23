@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtherElect</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="etherelectfavicon.png">
+    <!--<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.2.0/ethers.umd.min.js" integrity="sha512-YrJ7ZzmtmVJdwCwu6B91ThUGLfNjsTdHf1IdPf3J7AZQIpVDvahcBLWoKC1ebZ9RN6upm9ZheIFKSf7s7k/ZYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="linkmetamask">
+        <p id="walletlinknotification">You must link your Metamask wallet in order to vote</p>
+        <button id="linkwallet">Link Wallet</button>
+    </div>
+    <div id="pollingbooth">
+        <div id="countdown">
+            <p id="countdownalert"><span id="count">567</span> seconds remaining</p>
+        </div>
+        <div id="primarycontainer">
+            <table id="candidatecontainer">
+                <tr>
+                    <th>Candidate ID</th>
+                    <th>Candidate Name</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Candidate 0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Candidate 1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Candidate 2</td>
+                </tr>
+            </table>
+        </div>
+        <div id="ballotform">
+            <p>Choose the ID of the candidate you are voting for:</p>
+            <label>
+                <input type="number" id="vote"/>
+                <button id="castvote">Cast Vote</button>
+            </label>
+        </div>
+        <div id="displayresultdiv">
+            <button id="displayresult">Display Result</button>
+        </div>
+        <div id="electionresult">
+            <table id="resultcontainer">
+                <tr>
+                    <th>Candidate ID</th>
+                    <th>Candidate Name</th>
+                    <th>Vote Tally</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Candidate 0</td>
+                    <td>Vote Tally</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Candidate 1</td>
+                    <td>Vote Tally</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Candidate 2</td>
+                    <td>Vote Tally</td>
+                </tr>
+            </table>
+        </div>
+        <div id="administrator">
+            <p id="administratorheading">Only Owner</p>
+            <div id="admintools">
+                <div id="callelection">
+                    <p id="callelectionnotification">Call Election</p>
+                    <input type="text" id="candidates" placeholder="Separate the names by a coma"/>
+                    <input type="number" id="electionduration" placeholder="Specify duration in minutes"/>
+                    <button id="calltheelection">Call Election</button>
+                </div>
+                <div id="entercandidate">
+                    <p id="entercandidatenotification">Enter a Candidate</p>
+                    <input type="text" id="candidate" placeholder="Enter the candidate's name"/>
+                    <button id="enterthecandidate">Enter Candidate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
